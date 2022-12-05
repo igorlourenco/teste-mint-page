@@ -1,0 +1,265 @@
+@font-face {
+  font-family: "Futura Md BT";
+  src: url("../../public/fonts/FuturaBT/FutuBd.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Teko";
+  src: url("../../public/fonts/Teko/Teko-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Blender Pro";
+  src: url("../../public/fonts/BlenderPro/BlenderPro-Book.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.chakra-stack.ladyBloddy-container {
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(6, 6, 6, 0) 6.25%,
+    #060606 100%
+  );
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  display: block;
+}
+.ladyBloddy-images {
+  position: relative;
+  margin: 0 auto;
+}
+
+.ladyBloddy-images img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  opacity: 0;
+  transition: 1s cubic-bezier(0.755, 1.05, 0.855, 2.06);
+  object-fit: contain;
+}
+
+.ladyBloddy-images img.active {
+  opacity: 1;
+}
+
+.ladyBloddy-bullets {
+  position: absolute;
+  bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.ladyBloddy-label {
+  position: absolute;
+  bottom: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.bullet-active {
+  padding: 0;
+  width: 10%;
+  background-image: url("/backgrounds/slide.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-15%);
+  transition: 1s cubic-bezier(0.5, 0.6, 0.7);
+}
+
+.span-image {
+  background-color: transparent;
+}
+
+.span-image {
+  width: 7%;
+}
+
+.bullet-active img {
+  scale: 1.3;
+}
+
+.img-active {
+  margin-bottom: 20px;
+}
+
+/* connecting */
+
+.connecting-container {
+  width: 100%;
+  position: relative;
+  padding-top: 4rem !important;
+}
+.connecting-container::before {
+  content: "";
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6334908963585435) 18%,
+    rgba(0, 0, 0, 1) 35%,
+    rgba(0, 0, 0, 1) 55%,
+    rgba(0, 0, 0, 0.4906337535014006) 76%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  width: 100%;
+
+  position: absolute;
+  top: -16rem;
+}
+.connecting-video {
+  width: 100%;
+}
+.connecting-video iframe {
+  max-width: 90vw;
+  /*border: 2px solid #e66933;
+	border-radius: 5px;*/
+  width: 100%;
+}
+
+/* faq */
+
+.faq-container {
+  position: relative;
+  background-color: #060604;
+}
+.faq-container::before {
+  content: "";
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6334908963585435) 18%,
+    rgba(0, 0, 0, 1) 35%,
+    rgba(0, 0, 0, 1) 55%,
+    rgba(0, 0, 0, 0.4906337535014006) 76%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  width: 100%;
+  height: 19rem;
+  position: absolute;
+  top: -9rem;
+  filter: blur(3rem);
+}
+
+.accordion_question .accordion_question-btn {
+  transition: 0.5s ease-in-out;
+}
+.accordion_question[aria-expanded="true"] .accordion_question-btn {
+  transform: rotate(180deg);
+  filter: brightness(1.5);
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1250px) {
+  .chakra-stack.ladyBloddy-container {
+    height: 40rem;
+  }
+  .ladyBloddy-images img {
+    transform: translate(-50%, 62%);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .rebeliao-content {
+    grid-template-columns: 1fr;
+  }
+  .rebeliao-content img {
+    order: -1;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .chakra-stack.apply-nft_content .apply-nft_img {
+    width: 200%;
+    max-width: unset;
+  }
+  /* .trait-container > div .chakra-image,
+	.trait-container > div .chakra-stack {
+	  margin: auto;
+	} */
+  .rebeliao-content {
+    width: 75%;
+  }
+  .chakra-stack.ladyBloddy-container {
+    height: 24rem;
+    background-size: cover;
+  }
+  .ladyBloddy-images {
+    max-width: 80vw;
+  }
+  .ladyBloddy-bullets {
+    bottom: 2rem;
+  }
+  .ladyBloddy-images img {
+    transform: translate(-50%, 65%);
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .ladyBloddy-images {
+    width: 80vw;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .chakra-stack.apply-nft_content .apply-nft_img {
+    width: 250%;
+  }
+  .chakra-stack.apply-nft_content .apply-nft_btn {
+    top: 1rem;
+  }
+  .chakra-stack.benefits-container {
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .rebeliao-content {
+    width: 85%;
+  }
+  .connecting-video iframe {
+    width: 90vw;
+    height: 50vw;
+  }
+  .ladyBloddy-images img {
+    transform: translate(-50%, 142%);
+  }
+  span.ladyBloddy-bullets_item {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  .ladyBloddy-bullets {
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 670px) and (max-width: 991px) {
+  .metaverse_bayc1 {
+    margin-right: 15rem;
+    margin-left: auto;
+  }
+}
+
+.rebeliao-container > .chakra-stack {
+  width: 100%;
+}
+
+.footer_class {
+  width: 100%;
+  background-color: #000;
+  z-index: 3;
+}

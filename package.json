@@ -1,0 +1,36 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.2",
+    "@chakra-ui/react": "^2.2.1",
+    "@chakra-ui/theme-tools": "^2.0.2",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.9.0",
+    "cookie-session": "^2.0.0",
+    "ethers": "^5.7.2",
+    "framer-motion": "^6.3.0",
+    "google-spreadsheet": "^3.3.0",
+    "mysql2": "^2.3.3",
+    "next": "latest",
+    "next-connect": "^0.13.0",
+    "passport": "0.5",
+    "passport-steam": "^1.0.17",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.39.6",
+    "react-icons": "^4.7.1",
+    "twilio": "^3.83.4",
+    "wagmi": "^0.8.7"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^4.7.2"
+  }
+}
