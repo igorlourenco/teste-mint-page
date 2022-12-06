@@ -15,6 +15,8 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
     "SELECT * FROM users WHERE email = ? AND id_transacao = ?",
     [email, id_transacao],
     function (err, result, fields) {
+      if (err) throw err;
+
       res.json({ result: result ? result[0] : null });
     }
   );

@@ -15,6 +15,8 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
     "SELECT * FROM users WHERE nickname = ?",
     nickname,
     function (err, result, fields) {
+      if (err) throw err;
+
       res.json({ result: result ? result[0] : null });
     }
   );
