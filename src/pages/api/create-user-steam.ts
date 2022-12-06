@@ -4,26 +4,26 @@ import mysql from "mysql2";
 
 export const connection = mysql.createConnection({
   host: "localhost", // "sql123.main-hosting.eu"
-  user: "root",
-  password: "root",
-  database: "myschema",
+  user: "u288229939_admin",
+  password: "PnZvp4M7$d8!",
+  database: "u288229939_prevenda",
 });
 
 export default async function (req: NextApiRequest, res: NextApiResponse) {
   const { email, wallet, nickname, status, edition_number, edition_name } =
     req.body;
   connection.query(
-    "INSERT INTO prevenda VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+    "INSERT INTO users VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
     [
-      email,
       null, // id
+      email,
       wallet,
       nickname,
+      null,
       edition_name,
       edition_number,
       status,
       new Date(), // last_update
-      null,
     ],
     function (err, result, fields) {
       if (err) throw err;
