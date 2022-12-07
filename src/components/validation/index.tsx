@@ -17,7 +17,7 @@ export const Validation = ({
   type,
   userOwnsGameOnSteam = false,
 }: ValidationProps) => {
-  const [step, setStep] = useState<number>(1);
+  const [step, setStep] = useState<number>(2);
 
   return (
     <Stack w={step < 4 ? "455px" : "664px"} alignItems="center">

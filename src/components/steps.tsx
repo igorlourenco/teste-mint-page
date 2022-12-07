@@ -6,7 +6,6 @@ interface StepsProps {
 }
 
 export const Steps = ({ step, type }: StepsProps) => {
-  console.log({ type });
   return (
     <Stack mb="2rem" w="455px">
       <Flex justifyContent="space-between">

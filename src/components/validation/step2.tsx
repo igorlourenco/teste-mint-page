@@ -128,7 +128,7 @@ export const Step2 = ({ type, setStep }: ValidationProps) => {
                 value={address ? address : ""}
                 borderStyle="solid"
                 borderWidth="1px"
-                borderColor={errors.address ? "#C92C2C" : "#BFBFBF"}
+                borderColor={address ? "#65FE08" : "#C92C2C"}
                 backgroundColor={errors.address ? "#FF9E9E" : "#BCBCBC"}
                 padding="0.5rem 1rem"
                 fontStyle="italic"
